@@ -1,0 +1,23 @@
+# Lab 2.1: C Libraries, Linking, and ELF Executable Structure
+
+## Objective
+
+This lab focuses on understanding how C programs interact with the C Standard Library and how Linux builds and loads executables. I completed tasks covering library locations, static and dynamic linking, and inspecting ELF binary structures using `readelf` and `ldd`.
+
+## Files
+
+* `procinfo.c` – C source code that displays Process ID (PID), Parent Process ID (PPID), and current system time.
+* `procinfo.o` – Object file generated during compilation.
+* `procinfo` – Standard executable file.
+* `procinfo_dynamic` – Dynamically linked executable.
+* `procinfo_static` – Statically linked executable.
+
+## Tasks
+
+### Task 1: A Practical C Program
+
+I compiled and ran a C program utilizing library functions such as `getpid()`, `getppid()`, `time()`, `localtime()`, and `printf()` to display process information.
+
+```bash
+gcc procinfo.c -o procinfo
+./procinfo
